@@ -1,3 +1,4 @@
+const Menubar = require('menubar')
 const electron = require('electron')
 // Module to control application life.
 const app = electron.app
@@ -6,10 +7,19 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
+const menubar = Menubar({
+  width:300,
+  height:400,
+  icon: './images/kitchen-fork-icon.png'
+})
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
+
+menubar.on('ready', () => {
+  console.log('READY!');
+})
 
 function createWindow () {
   // Create the browser window.
