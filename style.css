@@ -1,6 +1,5 @@
 .timer {
-    font-size: 75px;
-    background: black;
+    font-size: 60px;
+    background: #0B0D0F;
     color: #efefef;
-    /*text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 15px #228DFF, 0 0 25px #228DFF, 0 0 30px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF;*/
 }

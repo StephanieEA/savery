@@ -44,11 +44,11 @@ function createWindow () {
     mainWindow = null
   })
 
-  // When UI has finish loading
-  mainWindow.webContents.on('did-finish-load', () => {
-      // Send the timer value
-      mainWindow.webContents.send('timer-change', timerTime);
-  });
+  // // When UI has finish loading
+  // mainWindow.webContents.on('did-finish-load', () => {
+  //     // Send the timer value
+  //     mainWindow.webContents.send('timer-change', timerTime);
+  // });
 }
 
 // This method will be called when Electron has finished
