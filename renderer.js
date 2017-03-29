@@ -3,6 +3,9 @@
 // All of the Node.js APIs are available in this process.
 
 const $ = require('jquery');
+const electron = require('electron');
+const ipc = electron.ipcRenderer;
+//shell manages files and URLs using their default applications, if we want to have URLs open in new windows
 
 $('#save-recipe-btn').on('click', () => {
   const title = $('#title-field').val();

@@ -1,51 +1,54 @@
-const Menubar = require('menubar')
-const electron = require('electron')
-// Module to control application life.
-const app = electron.app
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
+const Menubar = require('menubar');
+const electron = require('electron');
+const fs = require('fs');
+const app = electron.app;
+const BrowserWindow = electron.BrowserWindow;
 
-const path = require('path')
-const url = require('url')
+const path = require('path');
+const url = require('url');
 const menubar = Menubar({
   width:300,
   height:400,
   icon: './images/kitchen-fork-icon.png'
-})
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let mainWindow;
+const recipes = recipe_file.json
 
 menubar.on('ready', () => {
   console.log('READY!');
-})
+});
 
-function createWindow () {
-  // Create the browser window.
+//When Electron is finished loaing
+app.on('ready', createWindow)
+
+// Create the browser window.
+const createWindow () => {
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
-  // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
   }))
 
-  // Open the DevTools.
   mainWindow.webContents.openDevTools()
 
-  // Emitted when the window is closed.
   mainWindow.on('closed', function () {
-    
+
     mainWindow = null
   })
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+const getRecipes = () => {
+  return JSON.parse(fs.readFileSync(recipes))
+}
+
+const writeRecipes = (food) => {
+  let allFood = food.all_recipes.map()
+}
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
@@ -63,6 +66,3 @@ app.on('activate', function () {
     createWindow()
   }
 })
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
