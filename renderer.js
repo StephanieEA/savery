@@ -31,10 +31,10 @@ const validateUrl = (link) => {
 
 // Helper function, to format the time
 const secondsToTime = (s) => {
-  let momentTime = moment.duration(s, 'seconds');
-  let sec = momentTime.seconds() < 10 ? ('0' + momentTime.seconds()) : momentTime.seconds();
-  let min = momentTime.minutes() < 10 ? ('0' + momentTime.minutes()) : momentTime.minutes();
-  let hours = momentTime.hours() < 10 ? ('0' + momentTime.hours()) : momentTime.hours();
+  const momentTime = moment.duration(s, 'seconds');
+  const sec = momentTime.seconds() < 10 ? ('0' + momentTime.seconds()) : momentTime.seconds();
+  const min = momentTime.minutes() < 10 ? ('0' + momentTime.minutes()) : momentTime.minutes();
+  const hours = momentTime.hours() < 10 ? ('0' + momentTime.hours()) : momentTime.hours();
   return `${hours}:${min}:${sec}`;
 }
 
