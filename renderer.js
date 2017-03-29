@@ -32,6 +32,10 @@ const validateUrl = (link) => {
   return link
 }
 
+const sendUrl = () => {
+  ipc.send()
+}
+
 $('#grocery-list-btn').on('click', (e) => {
   createGroceryList()
 })
