@@ -1,30 +1,28 @@
-const Menubar = require('menubar');
-const electron = require('electron');
-const fs = require('fs');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const Menubar = require('menubar')
+const electron = require('electron')
+const fs = require('fs')
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
 
-const path = require('path');
-const url = require('url');
+const path = require('path')
+const url = require('url')
 const menubar = Menubar({
   width:300,
   height:400,
   icon: './images/kitchen-fork-icon.png'
-});
+})
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow;
+let mainWindow
 const recipes = recipe_file.json
 
 menubar.on('ready', () => {
-  console.log('READY!');
+  console.log('READY!')
 });
 
-//When Electron is finished loaing
 app.on('ready', createWindow)
 
-// Create the browser window.
 const createWindow () => {
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
@@ -42,12 +40,18 @@ const createWindow () => {
   })
 }
 
+//ipcMain.on('page load'), it will receive something from the ipcRenderer
+//probably the notification that the page has loaded, so it can get the information
+//from the json file (getRecipes). These will then display. or just export the function
+
 const getRecipes = () => {
   return JSON.parse(fs.readFileSync(recipes))
 }
 
 const writeRecipes = (food) => {
   let allFood = food.all_recipes.map()
+  //if the new recipe isn't already in allFood, push it in.
+  //stringify
 }
 
 // Quit when all windows are closed.
@@ -66,3 +70,5 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+exports.getRecipes = getRecipes
