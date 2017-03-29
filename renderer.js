@@ -35,5 +35,4 @@ const validateUrl = (link) => {
 $('#grocery-list-btn').on('click', (e) => {
   //when I click on the grocery list button, a text area should pop up with a save button.
   e.preventDefault()
-  shell.openExternal(this.)
 })
