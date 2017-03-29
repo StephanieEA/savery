@@ -3,6 +3,7 @@
 // All of the Node.js APIs are available in this process.
 
 const $ = require('jquery');
+const moment = require('moment');
 
 $('#save-recipe-btn').on('click', () => {
   const title = $('#title-field').val();
@@ -10,6 +11,7 @@ $('#save-recipe-btn').on('click', () => {
   const newLink = validateUrl(link);
   saveRecipe(title, newLink);
 })
+
 
 const saveRecipe = (title, link) => {
 
@@ -26,3 +28,31 @@ const validateUrl = (link) => {
   }
   return link;
 }
+
+// Helper function, to format the time
+const secondsToTime = (s) => {
+  let momentTime = moment.duration(s, 'seconds');
+  let sec = momentTime.seconds() < 10 ? ('0' + momentTime.seconds()) : momentTime.seconds();
+  let min = momentTime.minutes() < 10 ? ('0' + momentTime.minutes()) : momentTime.minutes();
+  let hours = momentTime.hours() < 10 ? ('0' + momentTime.hours()) : momentTime.hours();
+  return `${hours}:${min}:${sec}`;
+}
+
+// Initialize currentTime
+let currentTime = 0;
+
+$('#increase-time').on('click', () => {
+  currentTime = currentTime + 10
+  timerDiv.innerHTML = secondsToTime(currentTime);
+})
+
+$('#start-timer').on('click', () => {
+  setInterval(() => {
+    // When reaching 0. Stop.
+    if(currentTime <= 0) return
+    // Remove one second
+    currentTime = currentTime - 1;
+    // Print out the time
+    timerDiv.innerHTML = secondsToTime(currentTime);
+  }, 1000); // 1 second
+})
