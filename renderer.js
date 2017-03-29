@@ -1,6 +1,3 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
 const electron = require('electron')
 const $ = require('jquery');
 
@@ -36,7 +33,5 @@ const validateUrl = (link) => {
 }
 
 $('#grocery-list-btn').on('click', (e) => {
-  debugger
-  //when I click on the grocery list button, a text area should pop up with a save button.
   createGroceryList()
-}) // new window will not pop up
+})
