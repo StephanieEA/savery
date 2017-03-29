@@ -16,9 +16,6 @@ const menubar = Menubar({
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-// Capture command line argument
-let argsCmd = process.argv.slice(2);
-let timerTime = parseInt(argsCmd[0]);
 
 menubar.on('ready', () => {
   console.log('READY!');
@@ -43,17 +40,8 @@ function createWindow () {
 
     mainWindow = null
   })
-
-  // // When UI has finish loading
-  // mainWindow.webContents.on('did-finish-load', () => {
-  //     // Send the timer value
-  //     mainWindow.webContents.send('timer-change', timerTime);
-  // });
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
 
 // Quit when all windows are closed.
