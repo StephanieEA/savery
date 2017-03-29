@@ -9,6 +9,10 @@ const ipc = electron.ipcRenderer
 const remote = electron.remote
 const shell = electron.shell
 
+const currentWindow = remote.getCurrentWindow()
+
+const { createGroceryList } = remote.require('./main')
+
 $('#save-recipe-btn').on('click', () => {
   const title = $('#title-field').val();
   const link = $('#url-field').val();
@@ -33,6 +37,7 @@ const validateUrl = (link) => {
 }
 
 $('#grocery-list-btn').on('click', (e) => {
-  //when I click on the grocery list button, a text area should pop up with a save button.
   e.preventDefault()
-})
+  //when I click on the grocery list button, a text area should pop up with a save button.
+  createGroceryList()
+}) // new window will not pop up

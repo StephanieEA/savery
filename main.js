@@ -13,6 +13,7 @@ const menubar = Menubar({
   icon: './images/kitchen-fork-icon.png'
 })
 
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -21,16 +22,38 @@ menubar.on('ready', () => {
   console.log('READY!');
 })
 
+const windows = new Set()
+// creates fancy array of windows
+
+const createGroceryList = exports.createGroceryList = (file) => {
+  let groceryWindow = new BrowserWindow({show: false})
+  windows.add(groceryWindow)
+  //creates a new window for the grocery list and defaults it to not show. We add this window to the window Set
+
+  //load grocery list file
+  groceryWindow.loadURL('file://' + __dirname + '/grocery-list.html')
+
+  groceryWindow.once('ready-to-show', () => {
+    if (file) openFile(groceryWindow, file)
+    groceryWindow.show()
+    //Once the new window is ready to show, we will call openFiel if there is a file to open with the new window. Then we show the new window.
+  })
+
+  return groceryWindow
+}
+
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600})
+
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
-  }))
+  })
+)
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools()
@@ -40,6 +63,8 @@ function createWindow () {
 
     mainWindow = null
   })
+
+
 }
 
 // This method will be called when Electron has finished
