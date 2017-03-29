@@ -2,7 +2,7 @@
   "name": "electron-quick-start",
   "version": "1.0.0",
   "description": "A minimal Electron application",
-  "main": "main.js",
+  "main": "lib/main.js",
   "scripts": {
     "start": "electron ."
   },
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
-    "menubar": "^5.2.3"
+    "menubar": "^5.2.3",
+    "moment": "^2.18.1"
   }
 }

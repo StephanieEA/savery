@@ -1,6 +1,5 @@
 const Menubar = require('menubar')
 const electron = require('electron')
-const fs = require('fs')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
@@ -13,7 +12,6 @@ const menubar = Menubar({
 })
 
 let mainWindow
-const recipes = recipe_file.json
 
 const windows = new Set()
 
@@ -46,19 +44,6 @@ function createWindow () {
   })
 }
 
-//ipcMain.on('page load'), it will receive something from the ipcRenderer
-//probably the notification that the page has loaded, so it can get the information
-//from the json file (getRecipes). These will then display. or just export the function
-
-const getRecipes = () => {
-  return JSON.parse(fs.readFileSync(recipes))
-}
-
-const writeRecipes = (food) => {
-  let allFood = food.all_recipes.map()
-  //if the new recipe isn't already in allFood, push it in.
-  //stringify
-}
 app.on('ready', () => {
   createWindow()})
 
@@ -73,5 +58,3 @@ app.on('activate', function () {
     createWindow()
   }
 })
-
-exports.getRecipes = getRecipes
