@@ -1,8 +1,13 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
-
+const electron = require('electron')
+const mainProcess = require('./main')
 const $ = require('jquery');
+
+const ipc = electron.ipcRenderer
+const remote = electron.remote
+const shell = electron.shell
 
 $('#save-recipe-btn').on('click', () => {
   const title = $('#title-field').val();
@@ -26,3 +31,9 @@ const validateUrl = (link) => {
   }
   return link;
 }
+
+$('#grocery-list-btn').on('click', (e) => {
+  //when I click on the grocery list button, a text area should pop up with a save button.
+  e.preventDefault()
+  shell.openExternal(this.)
+})

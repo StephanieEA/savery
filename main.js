@@ -37,7 +37,7 @@ function createWindow () {
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
-    
+
     mainWindow = null
   })
 }
