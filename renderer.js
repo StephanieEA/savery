@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
-
-const $ = require('jquery')
-const electron = require('electron')
-const ipc = electron.ipcRenderer
-//shell manages files and URLs using their default applications, if we want to have URLs open in new windows
-=======
 const electron = require('electron')
 const $ = require('jquery');
->>>>>>> master
 
 const ipc = electron.ipcRenderer
 const remote = electron.remote
