@@ -1,6 +1,9 @@
 const Menubar = require('menubar')
 const electron = require('electron')
+<<<<<<< HEAD
 const fs = require('fs')
+=======
+>>>>>>> master
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
@@ -12,11 +15,10 @@ const menubar = Menubar({
   icon: './images/kitchen-fork-icon.png'
 })
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 const recipes = recipe_file.json
 
+<<<<<<< HEAD
 menubar.on('ready', () => {
   console.log('READY!')
 });
@@ -24,22 +26,49 @@ menubar.on('ready', () => {
 app.on('ready', createWindow)
 
 const createWindow () => {
+=======
+const windows = new Set()
+
+const createGroceryList = exports.createGroceryList = (file) => {
+  let groceryWindow = new BrowserWindow({show: false})
+  windows.add(groceryWindow)
+  groceryWindow.loadURL('file://' + __dirname + '/grocery-list.html')
+
+  groceryWindow.once('ready-to-show', () => {
+    if (file) openFile(groceryWindow, file)
+    groceryWindow.show()
+  })
+
+  return groceryWindow
+}
+
+function createWindow () {
+>>>>>>> master
   mainWindow = new BrowserWindow({width: 800, height: 600})
 
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
     protocol: 'file:',
     slashes: true
+<<<<<<< HEAD
   }))
 
   mainWindow.webContents.openDevTools()
 
   mainWindow.on('closed', function () {
 
+=======
+  })
+)
+  mainWindow.webContents.openDevTools()
+
+  mainWindow.on('closed', function () {
+>>>>>>> master
     mainWindow = null
   })
 }
 
+<<<<<<< HEAD
 //ipcMain.on('page load'), it will receive something from the ipcRenderer
 //probably the notification that the page has loaded, so it can get the information
 //from the json file (getRecipes). These will then display. or just export the function
@@ -53,22 +82,24 @@ const writeRecipes = (food) => {
   //if the new recipe isn't already in allFood, push it in.
   //stringify
 }
+=======
+app.on('ready', () => {
+  createWindow()})
+>>>>>>> master
 
-// Quit when all windows are closed.
 app.on('window-all-closed', function () {
-  // On OS X it is common for applications and their menu bar
-  // to stay active until the user quits explicitly with Cmd + Q
   if (process.platform !== 'darwin') {
     app.quit()
   }
 })
 
 app.on('activate', function () {
-  // On OS X it's common to re-create a window in the app when the
-  // dock icon is clicked and there are no other windows open.
   if (mainWindow === null) {
     createWindow()
   }
 })
+<<<<<<< HEAD
 
 exports.getRecipes = getRecipes
+=======
+>>>>>>> master
