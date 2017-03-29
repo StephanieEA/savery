@@ -4,6 +4,7 @@
 
 const $ = require('jquery');
 const moment = require('moment');
+const {ipcRenderer} = require('electron');
 
 
 $('#save-recipe-btn').on('click', () => {
@@ -37,20 +38,22 @@ const secondsToTime = (s) => {
   return `${min}:${sec}`;
 }
 
-  // Initial time, hardcoded
-  let currentTime = 255;
+ipcRenderer.on('timer-change', (event, t) => {
+  // Initialize time with value sent with event
+  let currentTime = t;
 
   // Print out the time
   timerDiv.innerHTML = secondsToTime(currentTime);
 
   // Execute every second
   let timer = setInterval(() => {
-      // Remove one second
-      currentTime = currentTime - 1;
-      // Print out the time
-      timerDiv.innerHTML = secondsToTime(currentTime);
-      // When reaching 0. Stop.
-      if(currentTime <= 0) {
-          clearInterval(timer);
-      }
+    // Remove one second
+    currentTime = currentTime - 1;
+    // Print out the time
+    timerDiv.innerHTML = secondsToTime(currentTime);
+    // When reaching 0. Stop.
+    if(currentTime <= 0) {
+      clearInterval(timer);
+    }
   }, 1000); // 1 second
+})
