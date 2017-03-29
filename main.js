@@ -7,20 +7,20 @@ const BrowserWindow = electron.BrowserWindow
 
 const path = require('path')
 const url = require('url')
-const menubar = Menubar({
-  width:300,
-  height:400,
-  icon: './images/kitchen-fork-icon.png'
-})
+// const menubar = Menubar({
+//   width:300,
+//   height:400,
+//   icon: './images/kitchen-fork-icon.png'
+// })
 
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-menubar.on('ready', () => {
-  console.log('READY!');
-})
+// menubar.on('ready', () => {
+//   console.log('READY!');
+// })
 
 const windows = new Set()
 // creates fancy array of windows
@@ -63,14 +63,13 @@ function createWindow () {
 
     mainWindow = null
   })
-
-
 }
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow)
+app.on('ready', () => {
+  createWindow()})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
