@@ -4,8 +4,6 @@
 
 const $ = require('jquery');
 const moment = require('moment');
-const {ipcRenderer} = require('electron');
-
 
 $('#save-recipe-btn').on('click', () => {
   const title = $('#title-field').val();
