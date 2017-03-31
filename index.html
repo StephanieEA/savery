@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <title>Savery!</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato|Lobster|Orbitron');
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <button id="increase-time">+</button>
-    <button id="decrease-time">-</button>
-    <button id="start-timer">START</button>
+    <h1>Savery</h1>
     <section id="timerDiv" class="timer">00:00:00</section>
-    <input id="title-field" placeholder="What is your recipe?"/>
-    <input id="url-field" placeholder="Recipe URL"/>
-    <button type="button" id="save-recipe-btn">Save</button>
-    <section id="recipe-box">
-      Recipes go here!
+    <section class="timer-controls">
+      <button id="increase-time" >+</button>
+      <button id="decrease-time">-</button>
+      <button id="start-timer">START</button>
     </section>
+    <hr/>
+    <section class="recipe-controls">
+      <input id="title-field" placeholder="What is your recipe?"/>
+      <input id="url-field" placeholder="Recipe URL"/>
+      <button type="button" id="save-recipe-btn">SAVE</button>
+    </section>
+    <hr />
+    <section id="recipe-box"></section>
     <section id="grocery-list-area">
       <a id="grocery"><button id="grocery-list-btn">Grocery List</button>
     </section>

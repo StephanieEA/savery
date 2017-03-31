@@ -1,5 +1,76 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  color: #FF4500;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  font-weight: 800;
+  margin: 0px 0px 5px;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+  outline: none;
+}
+
+.timer-controls > button {
+  background: #BF211E;
+  color: #efefef;
+  min-width: 20px;
+  outline: none;
+}
+
+.timer-controls > button:focus {
+  background: #FAA300;
+  color: white;
+}
+
 .timer {
-    font-size: 60px;
     background: #0B0D0F;
     color: #efefef;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.timer-controls {
+  text-align: right;
+  padding: 5px 5px 0;
+}
+
+.recipe-controls {
+  text-align: left;
+  padding: 5px;
+}
+
+.recipe-controls > button {
+  background: #0B0D0F;
+  color: #efefef;
+  float: right;
+}
+
+.recipe-controls > button:focus {
+  background: #5EA758;
+  color: #efefef;
+}
+
+a:link {
+  color: #FF4500;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #BF211E;
+}
+
+a:visited {
+  color: #273043;
 }
