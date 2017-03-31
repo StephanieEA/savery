@@ -74,3 +74,15 @@ a:hover, a:active, a:focus {
 a:visited {
   color: #273043;
 }
+
+webview.show {
+  display:inline-flex;
+  width:640px;
+  height:480px;
+}
+
+webview.hide {
+  flex: 0 1;
+  width: 0px;
+  height: 0px;
+}
