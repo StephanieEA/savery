@@ -1,5 +1,16 @@
 {
   "all_recipes": [
-    
+    {
+      "title": "cookies",
+      "link": "https://www.cookies.com"
+    },
+    {
+      "link": "https://www.noodles.com",
+      "title": "Mac n cheese"
+    },
+    {
+      "link": "https://www.cupcakes.com",
+      "title": "cupcakes"
+    }
   ]
 }
