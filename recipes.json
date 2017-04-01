@@ -13,12 +13,29 @@
       "title": "cupcakes"
     },
     {
+<<<<<<< HEAD
       "link": "https://www.swissrolls.com",
       "title": "swiss rolls"
     },
     {
       "link": "https://www.chipotle.com",
       "title": "Burritos"
+=======
+      "link": "https://",
+      "title": ""
+    },
+    {
+      "link": "https://",
+      "title": ""
+    },
+    {
+      "link": "https://",
+      "title": ""
+    },
+    {
+      "link": "https://",
+      "title": ""
+>>>>>>> master
     }
   ]
 }
