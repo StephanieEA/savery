@@ -5,6 +5,15 @@
     <title>Grocery List</title>
   </head>
   <body>
-    <p>Muh grocery list</p>
+    <h1>Make your grocery list: </h1>
+    <input id="item-input" placeholder="Item"></input>
+    <input id="item-qty-input" placeholder="quantity"></input>
+    <button id="save-item-btn">Save Item</button>
+    <ul id="grocery-list">
+      Grocery List:
+    </ul>
   </body>
+  <script>
+    require('./lib/renderer.js')
+  </script>
 </html>
