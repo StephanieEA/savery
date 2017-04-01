@@ -11,6 +11,14 @@
     {
       "link": "https://www.cupcakes.com",
       "title": "cupcakes"
+    },
+    {
+      "link": "https://www.swissrolls.com",
+      "title": "swiss rolls"
+    },
+    {
+      "link": "https://www.chipotle.com",
+      "title": "Burritos"
     }
   ]
 }
