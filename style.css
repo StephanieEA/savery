@@ -1,5 +1,96 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  color: #FF4500;
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0px 0px 5px;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+  outline: none;
+  padding: 5px 10px;
+}
+
+input {
+  font-size: 14px;
+  padding: 3px;
+}
+
+.timer-controls > button {
+  background: #BF211E;
+  color: #efefef;
+  outline: none;
+}
+
+.timer-controls > button:focus {
+  background: #FAA300;
+  color: white;
+}
+
 .timer {
-    font-size: 60px;
     background: #0B0D0F;
     color: #efefef;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.timer-controls {
+  text-align: right;
+  padding: 5px 5px 0;
+}
+
+.recipe-controls {
+  text-align: left;
+  padding: 5px;
+}
+
+.recipe-controls > button {
+  background: #0B0D0F;
+  color: #efefef;
+  float: right;
+}
+
+.recipe-controls > button:focus {
+  background: #5EA758;
+  color: #efefef;
+}
+
+button.recipe-title {
+  background: white;
+  color: #FF4500;
+  font-size: 26px;
+  outline: none;
+  text-decoration: none;
+}
+
+button.recipe-title:hover, button.recipe-title:active, button.recipe-title:focus {
+  color: #BF211E;
+}
+
+#recipe-box > webview {
+  text-align: center;
+}
+
+webview {
+  display:flex;
+  width:640px;
+  height:480px;
+}
+
+webview.hide {
+  flex: 0 1;
+  width: 0px;
+  height: 0px;
 }
