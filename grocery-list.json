@@ -5,12 +5,20 @@
       "quantity": "1 dozen"
     },
     {
-      "item": "bagels",
-      "quantity": "one dozen"
+      "item": "brown eggs",
+      "quantity": "12"
     },
     {
-      "item": "Peanuts",
-      "quantity": "1 ton"
+      "item": "cadbury creme eggs",
+      "quantity": "12"
+    },
+    {
+      "item": "Yogurt",
+      "quantity": "a big tub"
+    },
+    {
+      "item": "M & m's",
+      "quantity": "2 pounds"
     }
   ]
 }
