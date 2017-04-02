@@ -1,0 +1,16 @@
+{
+  "grocery_list": [
+    {
+      "item": "eggs",
+      "quantity": "1 dozen"
+    },
+    {
+      "item": "bagels",
+      "quantity": "one dozen"
+    },
+    {
+      "item": "Peanuts",
+      "quantity": "1 ton"
+    }
+  ]
+}
