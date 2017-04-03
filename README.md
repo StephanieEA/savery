@@ -27,8 +27,9 @@ The user is also able to create a grocery list by clicking on the `Grocery List`
 <hr>
 
 ### Team Blog Posts
-#### Gabi: [First](https://medium.com/@gab17ron/i-dipped-my-toe-into-the-pool-of-electron-this-week-and-id-like-to-share-my-interpretation-of-ca3a5e49225f)
-[Second](https://medium.com/@gab17ron/all-of-the-windows-31d01cea5213)
-[Third](https://medium.com/@gab17ron/if-i-could-turn-back-time-fcda9e079665)
+#### Gabi:
+ [First post](https://medium.com/@gab17ron/i-dipped-my-toe-into-the-pool-of-electron-this-week-and-id-like-to-share-my-interpretation-of-ca3a5e49225f)</br>
+[Second post](https://medium.com/@gab17ron/all-of-the-windows-31d01cea5213)</br>
+[Third post](https://medium.com/@gab17ron/if-i-could-turn-back-time-fcda9e079665)
 #### Anna:
 #### Stephanie:
