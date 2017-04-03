@@ -23,3 +23,16 @@ The user is able to enter and save the name and URL of a recipe. When the user c
 <b>Grocery List</b></br>
 The user is also able to create a grocery list by clicking on the `Grocery List` button. This will open both the main app and the grocery list form in new browser windows. In the grocery list, the user is able to enter an item description and a quantity. The user can also save the list to a text file for accessing at the grocery store.
 ![](http://g.recordit.co/pVJ8umJ7hA.gif)
+
+<hr>
+
+### Team Blog Posts
+#### Gabi:
+ [First post](https://medium.com/@gab17ron/i-dipped-my-toe-into-the-pool-of-electron-this-week-and-id-like-to-share-my-interpretation-of-ca3a5e49225f)</br>
+[Second post](https://medium.com/@gab17ron/all-of-the-windows-31d01cea5213)</br>
+[Third post](https://medium.com/@gab17ron/if-i-could-turn-back-time-fcda9e079665)
+#### Anna:
+#### Stephanie:
+[First post](https://seacoding.blogspot.com/2017/04/savery-beginning-with-electron.html)</br>
+[Second post](https://seacoding.blogspot.com/2017/04/savery-building-timer-and-using-webviews.html)</br>
+[Third post](https://seacoding.blogspot.com/2017/04/savery-post-mortem.html)
