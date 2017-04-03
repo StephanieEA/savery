@@ -32,6 +32,9 @@ The user is also able to create a grocery list by clicking on the `Grocery List`
 [Second post](https://medium.com/@gab17ron/all-of-the-windows-31d01cea5213)</br>
 [Third post](https://medium.com/@gab17ron/if-i-could-turn-back-time-fcda9e079665)
 #### Anna:
+[First Post](https://medium.com/@annastasia.psitos/beginning-to-work-with-electron-35fbc040b1b7)</br>
+[Second Post](https://medium.com/@annastasia.psitos/electron-and-json-a-dubious-love-story-fb56f2965f9e)</br>
+[Third Post](https://medium.com/@annastasia.psitos/electron-the-end-of-the-beginning-27cad210c90e)
 #### Stephanie:
 [First post](https://seacoding.blogspot.com/2017/04/savery-beginning-with-electron.html)</br>
 [Second post](https://seacoding.blogspot.com/2017/04/savery-building-timer-and-using-webviews.html)</br>
