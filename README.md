@@ -33,3 +33,6 @@ The user is also able to create a grocery list by clicking on the `Grocery List`
 [Third post](https://medium.com/@gab17ron/if-i-could-turn-back-time-fcda9e079665)
 #### Anna:
 #### Stephanie:
+[First post](https://seacoding.blogspot.com/2017/04/savery-beginning-with-electron.html)</br>
+[Second post](https://seacoding.blogspot.com/2017/04/savery-building-timer-and-using-webviews.html)</br>
+[Third post](https://seacoding.blogspot.com/2017/04/savery-post-mortem.html)
