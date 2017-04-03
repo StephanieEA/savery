@@ -11,6 +11,22 @@
     {
       "item": "cookies",
       "quantity": "all of them"
+    },
+    {
+      "item": "Cheetos",
+      "quantity": "a pallet"
+    },
+    {
+      "item": "Peanut Butter",
+      "quantity": "2 tbsp"
+    },
+    {
+      "item": "chitterlings",
+      "quantity": "1 lb"
+    },
+    {
+      "item": "chicken wings",
+      "quantity": "3 lbs"
     }
   ]
 }
