@@ -19,6 +19,50 @@
     {
       "item": "M & m's",
       "quantity": "2 pounds"
+    },
+    {
+      "item": "pineapple",
+      "quantity": "1"
+    },
+    {
+      "item": "trash bags",
+      "quantity": "1 box"
+    },
+    {
+      "item": "toilet paper",
+      "quantity": "200 rolls"
+    },
+    {
+      "item": "cookies",
+      "quantity": "lots"
+    },
+    {
+      "item": "test",
+      "quantity": "5"
+    },
+    {
+      "item": "potatoes",
+      "quantity": "4"
+    },
+    {
+      "item": "oatmeal",
+      "quantity": "1 box"
+    },
+    {
+      "item": "Pizzas",
+      "quantity": "all of them"
+    },
+    {
+      "item": "pizzas",
+      "quantity": "all of them"
+    },
+    {
+      "item": "chicken wings",
+      "quantity": "a pallet"
+    },
+    {
+      "item": "ice cream",
+      "quantity": "1 gallon"
     }
   ]
 }
