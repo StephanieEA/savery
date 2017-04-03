@@ -79,6 +79,12 @@ button.recipe-title:hover, button.recipe-title:active, button.recipe-title:focus
   color: #BF211E;
 }
 
+#grocery-list h2 {
+  color: #FF4500;
+  font-size: 26px;
+  outline: none;
+}
+
 #recipe-box > webview {
   text-align: center;
 }
