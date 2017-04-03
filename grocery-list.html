@@ -3,15 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Grocery List</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato|Lobster|Orbitron');
+    </style>
   </head>
   <body>
     <h1>Make your grocery list: </h1>
     <input id="item-input" placeholder="Item"></input>
     <input id="item-qty-input" placeholder="quantity"></input>
     <button id="save-item-btn">Save Item</button>
-    <ul id="grocery-list">
+    <section id="grocery-list">
       Grocery List:
-    </ul>
+    </section>
+    <button id="save-list-btn">Save List</button>
   </body>
   <script>
     require('./lib/renderer.js')
