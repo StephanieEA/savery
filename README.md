@@ -1,43 +1,25 @@
-# electron-quick-start
+# Savery
 
-**Clone and run for a quick way to see Electron in action.**
+### A recipe box on your desktop!
 
-This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start) within the Electron documentation.
+Savery is an Electron application created with [electron-quick-start](https://github.com/electron/electron-quick-start) and the [menubar module](https://github.com/maxogden/menubar)
 
-**Use this app along with the [Electron API Demos](http://electron.atom.io/#get-started) app for API code examples to help you get started.**
+Savery can be used to make your time in the kitchen a little easier.
 
-A basic Electron application needs just these files:
+To run Savery, clone this repo, `npm install` in your terminal, and run the app using `electron .` in the terminal.
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+#### Features
+<b>Menu bar icon </b></br>
+Savery starts as a menubar application. You will see the Savery icon (a cute little fork) in your menu bar when the app fires up.
 
-You can learn more about each of these components within the [Quick Start Guide](http://electron.atom.io/docs/tutorial/quick-start).
+<b>Kitchen Timer</b></br>
+The user is able to set a timer by clicking the `+` and `-` buttons to increment or decrement(in minutes) the desired time.
+![](http://g.recordit.co/bDlxArE0xG.gif)
 
-## To Use
+<b>Recipe Box</b></br>
+The user is able to enter and save the name and URL of a recipe. When the user clicks on the recipe that was saved, the URL opens in the app.
+![](http://g.recordit.co/iR35IBpl2U.gif)
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
-
-## Resources for Learning Electron
-
-- [electron.atom.io/docs](http://electron.atom.io/docs) - all of Electron's documentation
-- [electron.atom.io/community/#boilerplates](http://electron.atom.io/community/#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
-
-## License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
+<b>Grocery List</b></br>
+The user is also able to create a grocery list by clicking on the `Grocery List` button. This will open both the main app and the grocery list form in new browser windows. In the grocery list, the user is able to enter an item description and a quantity. The user can also save the list to a text file for accessing at the grocery store.
+![](http://g.recordit.co/pVJ8umJ7hA.gif)
